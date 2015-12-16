@@ -42,15 +42,13 @@ public class KisoKadai3 {
 			case"1":
 				while(true){
 					System.out.println("●ﾌｧｲﾙ作成メニュー●");
-					System.out.println("0.既存ﾌｫﾙﾀﾞの参照　1.新規ﾌｧｲﾙ作成　2.既存ファイルの削除　3.ﾒｲﾝﾒﾆｭｰに戻る");
+					System.out.println("1.新規ﾌｧｲﾙ作成　2.既存ファイルの削除　3.ﾒｲﾝﾒﾆｭｰに戻る");
 					try {
 						sts = br.readLine();
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
 					switch(sts){
-						case"0":
-						break;
 					case"1":
 						System.out.println("作成する場所とファイル名を指定してください");
 						System.out.println("ﾌｧｲﾙが無い場合新たに作成します");
@@ -108,11 +106,13 @@ public class KisoKadai3 {
 						}
 						continue;
 					case"3":
+						System.out.println("メインメニューに戻ります");
 						break;
 					default:
 						System.out.println("半角の1～3で入力してください");
 						continue;}
 				break;}
+				continue;
 
 
 			case"2":
@@ -222,10 +222,10 @@ public class KisoKadai3 {
 					}continue;
 			case"4":
 				System.out.println("メインメニューに戻ります");
-				break;}}
-
-
-
+				break;
+				default:
+					System.out.println("半角の1～4で入力してください");
+					continue;}break;}continue;
 
 
 
@@ -251,7 +251,7 @@ public class KisoKadai3 {
 
 					default:
 						System.out.println("半角の1か2で入力してください");
-						continue;}}
+						continue;}break;}continue;
 
 					default:
 				System.out.println("半角の1～3で入力してください");
