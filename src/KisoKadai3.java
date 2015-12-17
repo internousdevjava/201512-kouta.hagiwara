@@ -51,7 +51,7 @@ public class KisoKadai3 {
 					switch(sts){
 					case"1":
 						System.out.println("作成する場所とファイル名を指定してください");
-						System.out.println("ﾌｧｲﾙが無い場合新たに作成します");
+						System.out.println("ﾌｫﾙﾀﾞが無い場合新たに作成します");
 						System.out.println("c:/.../ファイル名　のような形で入力してください");
 						try {
 							sts = br.readLine();

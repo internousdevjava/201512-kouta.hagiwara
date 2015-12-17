@@ -20,7 +20,7 @@ public class KisoKadai2 {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		 try
 		 {
-				Thread.sleep(1000);
+				Thread.sleep(200);
 		 }
 		 catch (InterruptedException e)
 		 {
@@ -30,31 +30,28 @@ public class KisoKadai2 {
 		 System.out.println("");
 		 try
 		 {
-				Thread.sleep(1500);
+				Thread.sleep(200);
 		 } catch (InterruptedException e)
 		 {
 			 e.printStackTrace();
 		 }
-		 System.out.println("please enter the number 1to100.");
-	boolean b=true;
-		int an = 1+(int)(Math.random()*100);
-			while (b) {
+		 System.out.println("1-100の整数を入力してください.");;
+		long an = 1+(int)(Math.random()*100);
+			while (true) {
 
 					try {
 				String s = br.readLine();
-				int ans =Integer.parseInt(s);
-				if (ans>=101)
-				{
-					System.out.println("The range is 1-100");
-					}
-			int in = ans - an;
+
+				long ans =Long.parseLong(s);
+
+			long in = ans - an;
 		if (in>0)
 					{
-						System.out.println("More low");
+						System.out.println("もっと低いです");
 					}
 					else if(in<0)
 					{
-						System.out.println("More high");
+						System.out.println("もっと高いです");
 					}
 					else
 					{
@@ -63,9 +60,11 @@ public class KisoKadai2 {
 					} catch (IOException e) {
 						System.out.println(e);
 					} catch (NumberFormatException e) {
-						System.out.println("Please enter in single-byte number");
-
-					}}}}
+						System.out.println("整数の1-100で入力してください");
+					}
+					}
+			}
+	}
 
 
 
