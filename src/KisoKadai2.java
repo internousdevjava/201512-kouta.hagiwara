@@ -43,7 +43,9 @@ public class KisoKadai2 {
 				String s = br.readLine();
 
 				long ans =Long.parseLong(s);
-
+				if(ans > 100 || ans <=0){
+					System.out.println("整数の1-100で入力してください");
+					continue;}else{
 			long in = ans - an;
 		if (in>0)
 					{
@@ -57,7 +59,8 @@ public class KisoKadai2 {
 					{
 						System.out.print("Congratulations!");
 					}
-					} catch (IOException e) {
+					}
+				} catch (IOException e) {
 						System.out.println(e);
 					} catch (NumberFormatException e) {
 						System.out.println("整数の1-100で入力してください");

@@ -27,7 +27,7 @@ public class KisoKadai3 {
 			 while(true){
 		System.out.println("●メインメニュー●");
 		System.out.println("実行するコマンドを選択してください");
-		System.out.println("1.ﾌｧｲﾙ作成　2.ﾃｷｽﾄ操作　3.終了");
+		System.out.println("1.ﾌｧｲﾙ作成　2.ﾃｷｽﾄ操作ﾒﾆｭｰ　3.終了");
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String sts = null;
@@ -40,16 +40,6 @@ public class KisoKadai3 {
 		switch(sts){
 
 			case"1":
-				while(true){
-					System.out.println("●ﾌｧｲﾙ作成メニュー●");
-					System.out.println("1.新規ﾌｧｲﾙ作成　2.既存ファイルの削除　3.ﾒｲﾝﾒﾆｭｰに戻る");
-					try {
-						sts = br.readLine();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-					switch(sts){
-					case"1":
 						System.out.println("作成する場所とファイル名を指定してください");
 						System.out.println("ﾌｫﾙﾀﾞが無い場合新たに作成します");
 						System.out.println("c:/.../ファイル名　のような形で入力してください");
@@ -82,39 +72,7 @@ public class KisoKadai3 {
 				  }catch(IOException e){
 					  System.out.println(e);
 
-				}
-						continue;}
-					case"2":
-						System.out.println("削除するファイル名を指定してください");
-						System.out.println("c:/.../ファイル名　のような形で入力してください");
-						try {
-							sts = br.readLine();
-						} catch (IOException e) {
-
-							e.printStackTrace();
-						}
-						File file = new File(sts);
-
-						if(file.exists()){
-							if(file.delete()){
-								System.out.println(sts+"を削除しました");
-							}else{
-								System.out.println("ﾌｧｲﾙ削除できません");
-							}
-						}else{
-							System.out.println("ﾌｧｲﾙが見つかりません");
-						}
-						continue;
-					case"3":
-						System.out.println("メインメニューに戻ります");
-						break;
-					default:
-						System.out.println("半角の1～3で入力してください");
-						continue;}
-				break;}
-				continue;
-
-
+				}continue;}
 			case"2":
 			while(true){
 				System.out.println("●テキスト操作メニュー●");
